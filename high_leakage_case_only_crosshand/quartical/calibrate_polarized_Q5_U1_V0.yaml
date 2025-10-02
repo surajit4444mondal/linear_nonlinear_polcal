@@ -1,0 +1,30 @@
+input_ms:
+    path: polarized_source_I50_Q5_U1_V0.ms
+    data_column: DATA
+    select_corr: [0,1,2,3]
+input_model:
+    recipe: MODEL_DATA
+solver:
+    terms:
+        - L
+        - X
+    iter_recipe:
+        - 0
+        - 0
+output:
+    gain_directory: polarized_source_I50_Q5_U1_V0.crossphase
+    log_directory: polarized_source_I50_Q5_U1_V0.log
+    products:
+        - corrected_data
+    columns:
+        - CORRECTED_DATA
+    overwrite: 1
+dask:
+    threads: 2
+X:
+    type: crosshand_phase
+    load_from: polarized_source_I50_Q1_U5_V0.crossphase/X
+    solve_per: array
+L:
+    type: complex
+    load_from: gains_leakage.qc/L

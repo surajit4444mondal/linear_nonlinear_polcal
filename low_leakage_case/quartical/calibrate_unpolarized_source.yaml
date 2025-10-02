@@ -1,0 +1,22 @@
+input_ms:
+    path: unpolarized_source_I10.ms
+    data_column: DATA
+    select_corr: [0,1,2,3]
+input_model:
+    recipe: MODEL_DATA
+solver:
+    terms:
+        - L
+    iter_recipe:
+        - 100
+output:
+    overwrite: 1
+    
+    gain_directory: gains_leakage.qc
+    log_directory: gains_leakage.log
+    
+dask:
+    threads: 2
+L:
+    type: leakage
+    
