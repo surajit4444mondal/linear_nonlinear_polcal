@@ -48,7 +48,7 @@ def get_polfrac_polangle(IQUV_data):
     return pol_frac,pol_ang
 
 
-os.chdir('CASA')
+os.chdir('self_crosshand')
     
 msname2=['polarized_source_I50_Q1_U5_V0.ms',\
         'polarized_source_I50_Q5_U1_V0.ms',\
@@ -81,7 +81,7 @@ for j,(msname1,model1) in enumerate(zip(msname2,model_flux)):
     ax[j].legend()
     ax[j].grid('on')
 
-fig.savefig("compare_calibrated_values.pdf")
+#fig.savefig("compare_calibrated_values.pdf")
 plt.show()
     
 
