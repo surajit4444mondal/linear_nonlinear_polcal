@@ -89,14 +89,15 @@ In the linear regime, we can solve for relative leakages in the circular basis. 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{/home/barnali/Downloads/surajit/leakage_test/low_leakage_case/CASA/casa_solved_leakage_comparison.png}
-\caption{XX}
+\caption{Shows the comparison between the relatives leakages calculated using the input parameters and the relative leakages estimated from the simulated data using CASA. Top and bottom panels show the parameters corresponding to $d_{xi}e^{i\phi_{xi}}$ and $d_{yi}e^{i\phi_{yi}}$ respectively. }
 \label{fig:linear_CASA_leak_comparison}
 \end{figure} 
 
 \begin{figure}
 \centering
 \includegraphics[trim={2cm 0 2cm 0},clip,scale=0.7]{/home/barnali/Downloads/surajit/leakage_test/low_leakage_case/CASA/compare_calibrated_values.pdf}
-\caption{XX}
+\includegraphics[scale=0.6]{/home/barnali/Downloads/surajit/leakage_test/low_leakage_case/CASA/recovered_polarisation_properties.png}
+\caption{Top panel: Shows the linear polarization of $S_2\cdots S_5$. Black solid, blue solid ad red dashed lines show the source properties, before clibration, after calibration and the inpit parameters. Bottom panel: Shows the I,Q,U,V of the 4 sources after calibration.}
 \label{fig:compare_input_output_source_params}
 \end{figure}
 
@@ -126,14 +127,15 @@ The input $J^{leakage}_i$ is also normalised in the same manner, using the same 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{/home/barnali/Downloads/surajit/leakage_test/low_leakage_case/quartical/quartical_solved_leakage_comparison.png}
-\caption{XX}
+\caption{Shows the comparison between the $J_{norm}$ calculated using the input parameters and the $J_{norm}$ estimated from the simulated data using quartical. Top and bottom panels show the parameters corresponding to $d_{xi}e^{i\phi_{xi}}$ and $d_{yi}e^{i\phi_{yi}}$ respectively. }
 \label{fig:nonlinear_quartical_leak_comparison}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[trim={2cm 0 2cm 0},clip,scale=0.7]{/home/barnali/Downloads/surajit/leakage_test/low_leakage_case/quartical/compare_calibrated_values.pdf}
-\caption{XX}
+\includegraphics[scale=0.6]{/home/barnali/Downloads/surajit/leakage_test/low_leakage_case/quartical/recovered_polarisation_properties.png}
+\caption{Top panel: Shows the linear polarization of $S_2\cdots S_5$. Black solid, blue solid ad red dashed lines show the source properties, before clibration, after calibration and the inpit parameters. Bottom panel: Shows the I,Q,U,V of the 4 sources after calibration. Calibration is done using quartical.}
 \label{fig:compare_input_output_source_params_nonlinear}
 \end{figure}
 
@@ -143,12 +145,12 @@ The most general case is implemented in a folder named high\_leakage\_case\_gene
 
 \subsection{Linear analysis}
 
-The CASA analysis is exactly similar and the codes which are run are also named same. In Figure \ref{fig:linear_CASA_leak_comparison_high_leak_high_leak_general}, we show the comparison between the relative input and solved leakages. We find that the solved leakages match exactly with the input leakage, after appropriate normalisation. This is not surprising, considering that the cross-hand visibilities are exactly same for unpolarized source both in the linear and non-linear regime. In Figure \ref{fig:compare_input_output_source_params}, we compare the model and recovered source polarization properties for sources $S_2\cdots S_5$. We observe large deviations in the recovered polarisation properties compared to the model. In fact, the Stokes I is different for the recovered source, in comparison to the input source model. We have verified that the I and V after calibration is same as that in the data, after corruption by the antenna Jones matrices. This demonstrates that CASA does not apply leakage corrections and crosshand corrections to the co-polar visibilities.
+The CASA analysis is exactly similar and the codes which are run are also named same. In Figure \ref{fig:linear_CASA_leak_comparison_high_leak_general}, we show the comparison between the relative input and solved leakages. We find that the solved leakages match exactly with the input leakage, after appropriate normalisation. This is not surprising, considering that the cross-hand visibilities are exactly same for unpolarized source both in the linear and non-linear regime. In Figure \ref{fig:compare_input_output_source_params_high_leak_general}, we compare the model and recovered source polarization properties for sources $S_2\cdots S_5$. We observe large deviations in the recovered polarisation properties compared to the model. In fact, the Stokes I is different for the recovered source, in comparison to the input source model. We have verified that the I and V after calibration is same as that in the data, after corruption by the antenna Jones matrices. This demonstrates that CASA does not apply leakage corrections and crosshand corrections to the co-polar visibilities.
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_general/CASA/casa_solved_leakage_comparison.png}
-\caption{XX}
+\caption{Shows the comparison between the relatives leakages calculated using the input parameters and the relative leakages estimated from the simulated data using CASA. Top and bottom panels show the parameters corresponding to $d_{xi}e^{i\phi_{xi}}$ and $d_{yi}e^{i\phi_{yi}}$ respectively. }
 \label{fig:linear_CASA_leak_comparison_high_leak_general}
 \end{figure} 
 
@@ -156,7 +158,7 @@ The CASA analysis is exactly similar and the codes which are run are also named 
 \centering
 \includegraphics[trim={2cm 0 2cm 0},clip,scale=0.7]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_general/CASA/compare_calibrated_values.pdf}
 \includegraphics[scale=0.6]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_general/CASA/recovered_polarisation_properties.png}
-\caption{XX}
+\caption{Top panel: Shows the linear polarization of $S_2\cdots S_5$. Black solid, blue solid ad red dashed lines show the source properties, before clibration, after calibration and the inpit parameters. Bottom panel: Shows the I,Q,U,V of the 4 sources after calibration. Calibration has been done using CASA.}
 \label{fig:compare_input_output_source_params_high_leak_general}
 \end{figure}
 
@@ -169,7 +171,7 @@ Here, we also follow the strategy described in the linear case. We solve for the
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_general/quartical_leakage/quartical_solved_leakage_comparison.png}
-\caption{XX}
+\caption{Shows the comparison between the $J_{norm}$ calculated using the input parameters and the $J_{norm}$ estimated from the simulated data using quartical. Top and bottom panels show the parameters corresponding to $d_{xi}e^{i\phi_{xi}}$ and $d_{yi}e^{i\phi_{yi}}$ respectively. }
 \label{fig:nonlinear_quartical_leak_comparison_high_leak_general}
 \end{figure} 
 
@@ -177,7 +179,7 @@ Here, we also follow the strategy described in the linear case. We solve for the
 \centering
 \includegraphics[trim={2cm 0 2cm 0},clip,scale=0.7]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_general/quartical_leakage/compare_calibrated_values.pdf}
 \includegraphics[scale=0.6]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_general/quartical_leakage/recovered_polarisation_properties.png}
-\caption{XX}
+\caption{Top panel: Shows the linear polarization of $S_2\cdots S_5$. Black solid, blue solid ad red dashed lines show the source properties, before clibration, after calibration and the inpit parameters. Bottom panel: Shows the I,Q,U,V of the 4 sources after calibration. Calibration is done using quartical.}
 \label{fig:compare_input_output_source_params_quartical_high_leak_general}
 \end{figure}
 
@@ -200,7 +202,7 @@ For solving the full polrotation matrix, we need to use at least 2 polarised sou
 \centering
 \includegraphics[trim={2cm 0 2cm 0},clip,scale=0.7]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_general/self_crosshand_leakage/compare_calibrated_values.pdf}
 \includegraphics[scale=0.6]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_general/self_crosshand_leakage/recovered_polarisation_properties.png}
-\caption{XX}
+\caption{Top panel: Shows the linear polarization of $S_2\cdots S_5$. Black solid, blue solid ad red dashed lines show the source properties, before clibration, after calibration and the inpit parameters. Bottom panel: Shows the I,Q,U,V of the 4 sources after calibration. Calibration is done using normalized antenna leakaged solved using Quartical and then solving for the full polrotation matrix.}
 \label{fig:compare_input_output_source_params_self_crosshand_high_leak_general}
 \end{figure}
 
@@ -211,7 +213,7 @@ In this section, we try to understand, if it is possible to solve the Stokes V i
 \begin{figure}
 \centering
 \includegraphics[scale=0.7]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_general/quartical/antenna_diagonal_gains.png}
-\caption{XX}
+\caption{Shows the amplitude and phase of the diagonal gain terms of the Jones matrix determined using quartical, when we solve for the general matrix. This is same as the what is solved in CASA, in the linear regime.}
 \label{fig:quartical_ant_gains}
 \end{figure}
 
@@ -220,9 +222,102 @@ In this section, we try to understand, if it is possible to solve the Stokes V i
 \centering
 \includegraphics[scale=0.5]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_general/CASA_gaincal/recovered_polarisation_properties.png}
 \includegraphics[scale=0.5]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_general/self_crosshand/recovered_polarisation_properties.png}
-\caption{XX}
+\caption{Shows the I,Q,U,V of the 4 sources after calibration. Top panel: Calibration is done using CASA. Bottom panel: Calibration is done using normalized antenna leakaged solved using Quartical and then solving for the full polrotation matrix.}
 \label{fig:compare_linear_nonlinear_terms_with_diagonal}
 \end{figure}
+
+\subsection{How to ensure that the only polrotation term is crosshand phase}
+
+In the previous subsections, we have discussed why even though we have added the crosshand phase, we needed to solve for all the polrotation terms. We also explained how the leakage matrices itself contained another unitary matrix, which is, in general, as all three rotation terms. The crosshand phase applied is thus, added on top of this unitary matrix. However, to close the loop, and demnstrate the validity of this understanding, it is important to simulate a set of antenna leakages, for which the polrotation term is zero. This simulation is done in the folder named high\_leakage\_case\_only\_crosshand . The visibility generation scripts are similarly named and used as in other folders. The main thing which we have implemented in ensuring that the only polrotation term is the crosshand phase, we have chosen the leakage of one antenna to be a Hermitian matrix. This matrix is used as the reference antenna in all cases.  However, even in this instance, we cannot just use Quartical to calibrate the data. This is because, the antenna leakage matrices solved by Quartical, itself will have an unknown unitary matrix multiplies due to the inherent degeneracies of the Frobenius norm. Hence we have extracted the $J_{norm,i}$ for each antenna, and then solved just for the crosshand phase. The crosshand phase solving script is present in a folder again named as self\_crosshand. The name of the script is solve\_crosshand\_phase.py . It can be seen that we have only solved for the crosshand phase and the crosshand phase comes out to be $50.0013^\circ$, which is exactly same as the crosshand phase we have used in the simulation. Next we apply the solved parameters and generate the corrected visibilities.  In Figure \ref{fig:compare_input_output_source_params_self_crosshand_high_leak_crosshand} we show the comparison between the input and recovered source parameters. It is evident that all Stokes parameters have been recovered with extremely high accuracy.
+
+\begin{figure}
+\centering
+\includegraphics[trim={2cm 0 2cm 0},clip,scale=0.7]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_only_crosshand/self_crosshand/compare_calibrated_values.pdf}
+\includegraphics[scale=0.6]{/home/barnali/Downloads/surajit/leakage_test/high_leakage_case_only_crosshand/self_crosshand/recovered_polarisation_properties.png}
+\caption{Top panel: Shows the linear polarization of $S_2\cdots S_5$. Black solid, blue solid ad red dashed lines show the source properties, before clibration, after calibration and the inpit parameters. Bottom panel: Shows the I,Q,U,V of the 4 sources after calibration. Calibration is done using normalized antenna leakaged solved using Quartical and then solving only for the full crosshand phase.}
+\label{fig:compare_input_output_source_params_self_crosshand_high_leak_crosshand}
+\end{figure}
+
+\section{Pitfalls in arrays which have large leakage}
+
+We have demonstrated in Figure \ref{fig:compare_input_output_source_params_high_leak_general} that the linear equations (implemented in CASA) are unable to recover the source polarization properties after calibration. We have mentioned earlier, that the errors in the recovered I and V can be ``fixed" by assuming that the antenna gains are different for different sources. Similarly, the difference in polarisation angle can be fixed by solving crosshand phase for each source separately. While this will create issues on the target field(s), the calibrator fields will be `perfectly" calibrated, it will create 3 key issues.
+\begin{enumerate}
+\item The antenna gains retrieved by the CASA gaincal/bandpass tasks will become dependent on the source polarisation properties.
+\item The crosshand phase estimated by the above procedure also becomes dependent on the source polarisation dependent.
+\item It becomes practically impossible to apply on the estimated parameters on the target field.
+\end{enumerate}
+
+It is even more concerning that in arrays with large leakages, the recovered parameters after using Quartical, are also erroneous. And again, these issues can be attributed incorrectly as a source-dependent crosshand phase. Thus we have demonstrated here, using a controlled simulated antenna parameters, these issues can also arise due to the inherent properties of the non-linear equations and the algorithms used for determining the parameters. We have also explained why Quartical, in spite of being a non-linear solver, is unable to recover the source parameters exactly. Additionally, we have implemented software which, in the limited case of these simulations presented here, are able to recover the source properties to a high accuracy.
+
+\section{Mapping hybridizers which convert the linear basis observations to circular basis to this formalism}
+
+Hybridizer converts the observations taken with linear feeds to circular basis. The way this is done is combining the observations in the two channels, after shifting one of the two channels by $90^\circ$ phase. Whie this is the intention, due to inaccuracies in the hardware, the output polarization is not exactly circularly polarized, but more elliptically polarized. To understand the effect of this inaccuracy, let us write the full measurement equations by incorporating Jones matrices corresponding to the hybridizer. The Jones matrix of the hybridizer is given by $J_{hybrid,i}$ 
+
+\begin{equation}
+\begin{pmatrix}
+\tilde{E}_{R,i} \\
+\tilde{E}_{L,i}
+\end{pmatrix}=
+\begin{pmatrix}
+1 & i\\
+1 & fe^{i \left (-\pi/2+\phi_{hybrid,i}\right )}
+\end{pmatrix}
+\begin{pmatrix}
+E_{X,i} \\
+E_{Y,i}
+\end{pmatrix}=J_{hybrid,i}
+\begin{pmatrix}
+E_{X,i} \\
+E_{Y,i}
+\end{pmatrix}
+\end{equation}
+
+$E_{X,i}$ and $E_{Y,i}$ are the electric field in the linear basis in antenna $i$. $f$ and $\phi_{hybrid,i}$ are the error in the amplitude ratio, and phase difference between the two channels. $E_{R,i}$ and $E_{L,i}$ are the electric field vector in the RL basis. We have used the $\tilde{E}$ sign to denote the fact that the output observations are actually elliptically polarised, although we treat it as if they are observed in true circular basis. 
+
+Now let us write the Jones chain including the effect of the hybridizer.
+
+\begin{equation}
+\begin{aligned}
+\begin{pmatrix}
+V_{pq,RR} & V_{pq,RL}\\
+V_{pq,LR} & V_{pq,LL}
+\end{pmatrix}=&0.5 F J_{hybrid,p} J_p 
+\begin{pmatrix}
+I+Q & U+iV\\
+U-iV & I-Q
+\end{pmatrix} J_q^\dagger J_{hybrid,q}^\dagger\\
+= & 0.5 F J_{hybrid,p} J_p 
+\begin{pmatrix}
+I+Q & U+iV\\
+U-iV & I-Q
+\end{pmatrix} J_q^\dagger J_{hybrid,q}^\dagger\\
+= & 0.5 F J_{hybrid,p} J_p \left (J_{hybrid}^{ideal}\right )^{-1} J_{hybrid}^{ideal}
+\begin{pmatrix}
+I+Q & U+iV\\
+U-iV & I-Q
+\end{pmatrix} \left ( J_{hybrid}^{ideal}\right )^\dagger \left (J_{hybrid}^{ideal}\right )\dagger ^{-1} J_q^\dagger J_{hybrid,q}^\dagger\\
+=& 0.5 F J_{hybrid,p} J_p \left (J_{hybrid}^{ideal}\right )^{-1} 
+\begin{pmatrix}
+I+V & Q+iU\\
+Q-iU & I-V
+\end{pmatrix} \left (J_{hybrid}^{ideal}\right )\dagger ^{-1} J_q^\dagger J_{hybrid,q}^\dagger \\
+=&0.5 F \tilde{J}_p 
+\begin{pmatrix}
+I+V & Q+iU\\
+Q-iU & I-V
+\end{pmatrix} \tilde{J}_q^\dagger 
+\end{aligned}
+\end{equation}
+
+\begin{align}
+\tilde{J}_p= & J_{hybrid,p} J_p \left (J_{hybrid}^{ideal}\right )^{-1} \\
+J_{hybrid}^{ideal} = & \begin{pmatrix}
+1 & i\\
+1 & -i
+\end{pmatrix} 
+\end{align}
+
+Thus, we have converted the effect of the non-ideal hybridizer into an effective Jones matrix, which we can calibrate using the non-linear equations as shown earlier.
 
 
 \end{document}

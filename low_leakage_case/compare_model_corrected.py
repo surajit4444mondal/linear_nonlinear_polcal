@@ -47,7 +47,7 @@ def get_polfrac_polangle(IQUV_data):
     return pol_frac,pol_ang
 
 
-os.chdir('CASA')
+os.chdir('quartical')
     
 msname2=['polarized_source_I50_Q1_U5_V0.ms',\
         'polarized_source_I50_Q5_U1_V0.ms',\
@@ -72,7 +72,7 @@ for j,(msname1,model1) in enumerate(zip(msname2,model_flux)):
     polfrac_data,polang_data=get_polfrac_polangle(IQUV_data)
     polfrac_corrected,polang_corrected=get_polfrac_polangle(IQUV_corrected)
     polfrac_model,polang_model=get_polfrac_polangle(model1)
-    print (IQUV_data)
+    print (IQUV_corrected)
     ax[j].plot([polang_data,0],[polfrac_data,0],'k',label='data')
     ax[j].plot([polang_corrected,0],[polfrac_corrected,0],'b',label='corrected',lw=5)
     ax[j].plot([polang_model,0],[polfrac_model,0],'r',label='model',lw=2,ls='--')
